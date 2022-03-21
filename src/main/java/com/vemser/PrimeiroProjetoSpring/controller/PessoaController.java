@@ -2,7 +2,6 @@ package com.vemser.PrimeiroProjetoSpring.controller;
 
 import com.vemser.PrimeiroProjetoSpring.dto.PessoaCreateDTO;
 import com.vemser.PrimeiroProjetoSpring.dto.PessoaDTO;
-import com.vemser.PrimeiroProjetoSpring.entity.Pessoa;
 import com.vemser.PrimeiroProjetoSpring.service.EmailService;
 import com.vemser.PrimeiroProjetoSpring.service.PessoaService;
 import io.swagger.annotations.ApiOperation;

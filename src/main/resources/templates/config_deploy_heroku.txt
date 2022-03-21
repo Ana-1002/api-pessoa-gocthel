@@ -1,4 +1,4 @@
-1 - Colocar o spring na versão 2.5.6 e a Spring cloud na 2020.0.4
+git 1 - Colocar o spring na versão 2.5.6 e a Spring cloud na 2020.0.4
 2 - application.properties(Spring) padrão, com a seguinte configuração:
 
 	spring.application.name=PessoaAPI-DEV
