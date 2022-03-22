@@ -17,7 +17,7 @@ import java.time.LocalDate;
 @NoArgsConstructor
 @Data
 
-public class Pessoa {
+public class PessoaEntity {
     private Integer idPessoa;
     @NotEmpty
     private String nome;
