@@ -1,11 +1,9 @@
 package com.vemser.PrimeiroProjetoSpring.entity;
 
-import lombok.AllArgsConstructor;
-import lombok.Builder;
-import lombok.Data;
-import lombok.NoArgsConstructor;
+import lombok.*;
 import org.hibernate.validator.constraints.br.CPF;
 
+import javax.persistence.*;
 import javax.validation.constraints.Email;
 import javax.validation.constraints.NotBlank;
 import javax.validation.constraints.NotEmpty;
@@ -15,16 +13,22 @@ import java.time.LocalDate;
 @AllArgsConstructor
 @Builder
 @NoArgsConstructor
-@Data
-
+@Getter
+@Setter
+@Entity(name = "PESSOA")
 public class PessoaEntity {
+    @Id
+    @GeneratedValue(strategy = GenerationType.SEQUENCE, generator = "PESSOA_SEQ")
+    @SequenceGenerator(name= "PESSOA_SEQ", sequenceName = "seq_pessoa2", allocationSize = 1)
+    @Column(name = "id_pessoa")
     private Integer idPessoa;
-    @NotEmpty
+
+    @Column(name = "nome")
     private String nome;
-    @NotBlank @Past
+
+    @Column(name = "dataNascimento")
     private LocalDate dataNascimento;
-    @CPF
+
+    @Column(name = "cpf")
     private String cpf;
-    @Email
-    private String email;
 }

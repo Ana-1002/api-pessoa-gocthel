@@ -1,9 +1,10 @@
 package com.vemser.PrimeiroProjetoSpring.dto;
 
-import lombok.Data;
+import lombok.Getter;
+import lombok.Setter;
 
-@Data
+@Getter
+@Setter
 public class EnderecoDTO extends EnderecoCreateDTO{
     private Integer idEndereco;
-    private Integer idPessoa;
 }

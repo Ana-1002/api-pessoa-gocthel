@@ -18,7 +18,4 @@ public class PessoaCreateDTO {
     @ApiModelProperty (value="Cpf")
     @CPF
     private String cpf;
-    @ApiModelProperty (value="Email")
-    @Email
-    private String email;
 }

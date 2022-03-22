@@ -1,7 +1,6 @@
 package com.vemser.PrimeiroProjetoSpring.controller;
 import com.vemser.PrimeiroProjetoSpring.dto.ContatoCreateDTO;
 import com.vemser.PrimeiroProjetoSpring.dto.ContatoDTO;
-import com.vemser.PrimeiroProjetoSpring.entity.Contato;
 import com.vemser.PrimeiroProjetoSpring.service.ContatoService;
 import io.swagger.annotations.ApiOperation;
 import io.swagger.annotations.ApiResponse;
@@ -64,7 +63,7 @@ public class ContatoController {
             @ApiResponse(code = 500, message = "Foi gerada uma exceção"),
     })
     @GetMapping("/{idPessoa}") // localhost:8080/contato/1
-    public ResponseEntity<List<Contato>> listContatoById(@PathVariable("idPessoa") @Valid Integer id) {
+    public ResponseEntity<List<ContatoDTO>> listContatoById(@PathVariable("idPessoa") @Valid Integer id) {
         log.info("Listou o contato por id");
         return ResponseEntity.ok(contatoService.listContatoById(id));
     }
